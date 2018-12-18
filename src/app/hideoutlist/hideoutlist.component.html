@@ -1,0 +1,10 @@
+<h2>My hideouts</h2>
+<ul class="hideouts">
+  <li *ngFor="let hideout of hideouts"
+      [class.selected]="hideout === selectedHideout"
+      (click)="onSelect(hideout)">
+    <span class="badge">{{hideout.id}}</span> {{hideout.name}}
+  </li>
+</ul>
+
+<app-hideout-detail [hideout]="selectedHideout"></app-hideout-detail>
